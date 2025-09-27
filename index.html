@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chhattisgarh Grievance Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- For Hindi font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-title">
+            <img src="Assests/Coat_of_arms_of_Chhattisgarh.svg" alt="Logo" class="logo">
+            <div class="title-group">
+                <span class="title-hindi">छत्तीसगढ़ शासन<br>शिकायत निवारण प्रणाली</span>
+                <span class="title-eng">Chhattisgarh Government Grievance Redressal System</span>
+            </div>
+        </div>
+        <div class="toggle-switch">
+            <label class="switch">
+                <input type="checkbox" id="roleSwitch" onchange="toggleRole()">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <span class="portal-name">Chhattisgarh Jan Shikayat Niwaran Portal</span>
+    </div>
+    <div class="main">
+        <div class="left-section">
+            <div class="hindi-text">
+                आपकी शिकायत, हमारा समाधान<br>
+                पारदर्शिता *************** जवाबदेही
+            </div>
+            <img src="Assests/poster of grievance redressal.png" alt="Illustration" class="illustration">
+        </div>
+        <div class="right-section">
+            <div class="form-title" id="formTitle">लॉगिन / पंजीकरण</div>
+            <form id="loginForm">
+                <label for="name">नाम</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+
+                <label for="address">पता</label>
+                <input type="text" id="address" name="address" placeholder="Address" required>
+
+                <label>लिंग</label>
+                <div class="gender-group">
+                    <label><input type="radio" name="gender" value="Male" required> पुरुष</label>
+                    <label><input type="radio" name="gender" value="Female"> महिला</label>
+                    <label><input type="radio" name="gender" value="Other"> अन्य</label>
+                </div>
+
+                <label for="email">ईमेल आईडी</label>
+                <input type="email" id="email" name="email" placeholder="Email ID" required>
+
+                <label for="phone">फोन नंबर</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Phone Number" required>
+
+                <label for="district">जिला</label>
+                <select id="district" name="district" required>
+                    <option value="">जिला चुनें</option>
+                    <option value="Raipur">रायपुर</option>
+                    <option value="Bilaspur">बिलासपुर</option>
+                    <option value="Durg">दुर्ग</option>
+                    <option value="Rajnandgaon">राजनांदगांव</option>
+                    <option value="Korba">कोरबा</option>
+                    <option value="Jagdalpur">जगदलपुर</option>
+                    <option value="Ambikapur">अंबिकापुर</option>
+                    <!-- Add more districts as needed -->
+                </select>
+
+                <label for="pincode">पिन कोड</label>
+                <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" placeholder="Pincode" required>
+
+                <div class="actions">
+                    <button type="submit" class="login-btn">लॉगिन</button>
+                    <div class="signup">(Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a>)</div>
+                </div>
+                <div class="links">
+                    <a href="#">Forget Password</a>
+                    <a href="#">Help/Support</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
